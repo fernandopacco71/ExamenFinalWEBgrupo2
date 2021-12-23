@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">SIS VENT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">INICIO</a>
+                <!--a class="nav-link" href="{% url 'listadosdelpersonal' %}">lista PERSONAL</a>
+                <a class="nav-link" href="{% url 'detalledelpersonal' %}">detalle personal</a-->
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+
+{% block contenido %}
+    
+    <article class="">
+        <div class="baner">
+            <div class="card">
+                <i class="fab fa-whatsapp edid"></i>
+            </div>
+
+            <div class="card">
+                <i class="fab fa-facebook edid"></i>
+            </div>
+
+            <div class="card">
+                <i class="far fa-envelope edid"></i>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-map-marker-alt edid"></i>
+            </div>
+
+        </div>
+    </article>
+    <section>
+        <h1>Pagina Principal</h1>
+    </section>
+{% endblock %}

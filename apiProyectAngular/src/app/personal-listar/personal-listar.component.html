@@ -1,0 +1,53 @@
+
+<div class="container custom-container-2">
+
+    <!-- Show it when there is no employee -->
+    <div class="no-data text-center" *ngIf="Personal.length == 0">
+      <p>no ay personales registrados</p>
+      <button class="btn btn-outline-primary" routerLink="/create-employee">Add Empoyee</button>
+    </div>
+  
+    <!-- Employees list table, it hides when there is no employee -->
+    <div *ngIf="Personal.length !== 0">
+      <h3 class="mb-3 text-center">Control de Registro del Personal</h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">DNI</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Sexo</th>
+              <th scope="col">Cargo</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let personal of Personal">
+              <td>{{personal.id}}</td>
+              <td>{{personal.Nombres}}</td>
+              <td>{{personal.Apellidos}}</td>
+              <td>{{personal.DNI}}</td>
+              <td>{{personal.Direccion}}</td>
+              <td>{{personal.Sexo}}</td>
+              <td>{{personal.Cargo}}</td>
+              <td>{{personal.Telefono}}</td>
+              <td>{{personal.Correo}}</td>
+              <td>
+                  <button class="btn btn-success"routerLink="/editar-personal/{{personal.id}}">editar</button>
+
+                  <button class="btn btn-danger" (click)="eliminarpersonal(personal.id)">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>

@@ -1,0 +1,39 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      <h3 for="validationServer01" class="mb-3 text-center">Ingresar un nuevo personal</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Nombres" class="form-control" placeholder="nombre">
+      </div>
+
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Apellidos" class="form-control" placeholder="ingrese apellidos">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.DNI" class="form-control" placeholder="ingrese su dni">
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Direccion" class="form-control" placeholder="ingrese su direccion">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Sexo" class="form-control" placeholder="ingrese su sexo"> 
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Cargo" class="form-control" placeholder="ingrese su cargo">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Telefono" class="form-control" placeholder="ingrese su Telefono">
+      </div>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="PersonalDetalle.Correo" class="form-control" placeholder="ingrese su Correo">
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="addPersonal()">Create Personal</button>
+      </div>
+  
+    </div>
+  </div>
